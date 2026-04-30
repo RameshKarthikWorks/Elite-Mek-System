@@ -1,0 +1,268 @@
+Build a complete enterprise-grade ERP web application for an MEP (Mechanical, Electrical, Plumbing) company using Replit with PostgreSQL database, modern white-based professional UI theme, responsive design, strong RBAC, audit-ready architecture, and scalable modular structure.
+
+SYSTEM REQUIREMENTS:
+
+Use:
+	•	Frontend: React / Next.js (preferred)
+	•	Backend: Node.js + Express (or NestJS preferred)
+	•	Database: PostgreSQL
+	•	ORM: Prisma preferred
+	•	Authentication: JWT + Refresh Token
+	•	File Upload: Inbuilt attachment upload + preview + download
+	•	Export: Excel + PDF + CSV
+	•	Import: Excel + CSV bulk upload
+	•	UI Notifications: Toast messages for all CRUD operations
+	•	Validation: Frontend + Backend validation
+	•	Pagination: Default 30 records per page
+	•	Unified Search: Global smart search across all modules
+	•	Dashboard + Reports + Reminder system
+	•	Mail Configuration + Notifications
+	•	Welcome dialog box after login
+	•	Login information popup + recent activity
+	•	Audit logs for every action
+	•	API testing ready structure
+	•	UI validation and clean error handling
+	•	Professional typography settings
+	•	White theme with enterprise layout
+	•	Mobile responsive
+	•	Production-ready code structure
+
+DESIGN REQUIREMENTS:
+
+Theme:
+	•	White-based clean professional enterprise UI
+	•	Minimal premium dashboard style
+	•	Elegant cards
+	•	Professional tables
+	•	Sticky filters
+	•	Smooth form validations
+	•	Status badges
+	•	Approval workflow UI
+	•	Sidebar navigation
+	•	Header with notifications/profile
+	•	Welcome modal after login
+
+Typography Settings Module:
+	•	Font family configuration
+	•	Font size controls
+	•	Heading styles
+	•	Table typography settings
+	•	Report print typography settings
+
+Settings Module:
+	•	Company settings
+	•	Branch settings
+	•	Financial year settings
+	•	Mail configuration
+	•	SMTP settings
+	•	Notification settings
+	•	Approval settings
+	•	Role settings
+	•	Permission settings
+	•	Typography settings
+	•	Backup settings
+	•	System preferences
+	•	Tax settings
+	•	Currency settings
+
+RBAC SETTINGS:
+
+Create complete Role Based Access Control:
+
+Roles:
+	•	Super Admin
+	•	Admin
+	•	HR Manager
+	•	Finance Manager
+	•	Project Manager
+	•	Purchase Manager
+	•	Inventory Manager
+	•	Site Engineer
+	•	Sub Engineer
+	•	Supervisor
+	•	Accounts Executive
+	•	Payroll Executive
+	•	Store Keeper
+	•	Employee
+	•	Viewer
+
+Permissions:
+	•	Create
+	•	Edit
+	•	Delete
+	•	View
+	•	Approve
+	•	Export
+	•	Import
+	•	Print
+	•	Upload
+	•	Download
+
+Employee access must be module-wise and action-wise.
+
+AUTH MODULE:
+
+Include:
+	•	Register
+	•	Login
+	•	Forgot Password
+	•	Reset Password
+	•	OTP optional
+	•	Session management
+	•	Device login tracking
+	•	Welcome dialog after login
+	•	Login history
+	•	Password policy
+	•	Profile management
+
+MANDATORY MODULES:
+	1.	Employee Management
+	2.	Attendance Management
+	3.	Payroll Management
+	4.	Leave Management
+	5.	Customer Management
+	6.	Vendor / Supplier Management
+	7.	Project Management
+	8.	Site Management
+	9.	Work Order Management
+	10.	Tender / Estimation Management
+	11.	BOQ Management
+	12.	Purchase Order Management
+	13.	Inventory Management
+	14.	Inventory Movement Tracking
+	15.	Asset Management
+	16.	Expense Management
+	17.	Revenue Management
+	18.	Invoice & Billing Management
+	19.	Payment Tracking
+	20.	Contract Management
+	21.	Approval Workflow Management
+	22.	Document Management
+	23.	Dashboard Management
+	24.	Reports Module (Unified)
+	25.	Notification System
+	26.	Mail Configuration
+	27.	Audit Logs
+	28.	Role & Permission Management
+	29.	Petty Cash Management
+	30.	Milestone Module
+	31.	Reminder Module
+	32.	Category Management
+	33.	Settings Module
+	34.	Typography Settings
+	35.	Unified Search Module
+
+MILESTONE MODULE:
+
+Include:
+	•	Milestone creation
+	•	Project milestone tracking
+	•	Completion %
+	•	Deadline tracking
+	•	Delay alerts
+	•	Approval status
+	•	Site-wise milestone mapping
+	•	Progress reporting
+
+REMINDER MODULE:
+
+Include:
+	•	Due payment reminders
+	•	PO pending reminders
+	•	Attendance alerts
+	•	Payroll reminders
+	•	Contract expiry reminders
+	•	Asset maintenance reminders
+	•	Milestone deadline reminders
+	•	Leave approval reminders
+	•	Email reminders
+	•	Dashboard reminder cards
+
+REPORT MODULE:
+
+Create one unified report center across all modules:
+	•	Filters
+	•	Export PDF
+	•	Export Excel
+	•	Print view
+	•	Drill-down reports
+	•	Summary reports
+	•	Detailed reports
+	•	Date range filters
+	•	Project-wise reports
+	•	Employee-wise reports
+	•	Financial reports
+	•	Inventory reports
+	•	Payroll reports
+	•	Revenue reports
+	•	Expense reports
+	•	Audit reports
+
+COMMON FEATURES FOR ALL MODULES:
+
+Each module must include:
+	•	Create
+	•	Edit
+	•	Delete
+	•	View
+	•	Approval flow
+	•	Search
+	•	Advanced filters
+	•	Import
+	•	Export
+	•	PDF generation
+	•	Excel generation
+	•	Attachment upload
+	•	Attachment preview
+	•	Download attachment
+	•	Validation messages
+	•	Toast notifications
+	•	Pagination (30 records)
+	•	Status management
+	•	Audit tracking
+	•	Activity timeline
+	•	Comments
+	•	Notes
+	•	History logs
+
+FORM REQUIREMENTS:
+
+Every form must include:
+	•	Required field validation
+	•	Smart validation messages
+	•	Toast success/error
+	•	Auto-save draft if needed
+	•	Attachment section
+	•	Category selection
+	•	Approval status
+	•	Created by / updated by
+	•	Timestamps
+
+DATABASE:
+
+Use PostgreSQL with:
+	•	Proper normalization
+	•	Foreign keys
+	•	Audit tables
+	•	Soft delete support
+	•	Activity logs
+	•	Approval logs
+	•	Notification logs
+	•	Mail logs
+
+DELIVERABLE EXPECTATION:
+
+Generate:
+	•	Full production-ready architecture
+	•	Database schema
+	•	API structure
+	•	Backend services
+	•	Frontend UI pages
+	•	Admin dashboard
+	•	Employee dashboard
+	•	Reports engine
+	•	Approval workflow
+	•	Secure authentication
+	•	Replit-ready deployment structure
+
+The final output must look like a premium enterprise ERP suitable for elite MEP companies and sub-engineering excellence operations.
