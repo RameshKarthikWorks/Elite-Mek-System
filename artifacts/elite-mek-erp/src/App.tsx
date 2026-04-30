@@ -6,6 +6,23 @@ import NotFound from "@/pages/not-found";
 import { AppShell } from "@/layout/AppShell";
 import Login from "@/pages/auth/Login";
 import Dashboard from "@/pages/dashboard/Dashboard";
+import Projects from "@/pages/projects/Projects";
+import Sites from "@/pages/sites/Sites";
+import WorkOrders from "@/pages/work-orders/WorkOrders";
+import Milestones from "@/pages/milestones/Milestones";
+import Vendors from "@/pages/vendors/Vendors";
+import PurchaseOrders from "@/pages/purchase-orders/PurchaseOrders";
+import Inventory from "@/pages/inventory/Inventory";
+import Customers from "@/pages/customers/Customers";
+import Invoices from "@/pages/invoices/Invoices";
+import PettyCash from "@/pages/petty-cash/PettyCash";
+import Employees from "@/pages/employees/Employees";
+import Attendance from "@/pages/attendance/Attendance";
+import Leave from "@/pages/leave/Leave";
+import Reminders from "@/pages/reminders/Reminders";
+import Reports from "@/pages/reports/Reports";
+import Settings from "@/pages/settings/Settings";
+import AuditLogs from "@/pages/audit/AuditLogs";
 import { ModuleScaffold } from "@/components/ModuleScaffold";
 import { useAuthStore } from "@/lib/store/auth";
 import { useEffect } from "react";
@@ -15,9 +32,8 @@ import { useLocalStorage } from "@/lib/store";
 
 const queryClient = new QueryClient();
 
-// Placeholder for un-implemented pages
-const PlaceholderRoute = ({ title }: { title: string }) => (
-  <ModuleScaffold title={title} description={`The ${title} module is currently under construction.`} />
+const PlaceholderRoute = ({ title, plannedFeatures }: { title: string; plannedFeatures?: string[] }) => (
+  <ModuleScaffold title={title} description={`The ${title} module scaffold — full implementation coming soon.`} plannedFeatures={plannedFeatures} />
 );
 
 function AuthenticatedApp() {
@@ -36,44 +52,106 @@ function AuthenticatedApp() {
     <AppShell>
       <Switch>
         <Route path="/" component={Dashboard} />
-        
-        {/* Core Modules (Scaffolds for now to meet constraints, will expand fully if possible) */}
-        <Route path="/projects"><PlaceholderRoute title="Project Management" /></Route>
-        <Route path="/sites"><PlaceholderRoute title="Site Management" /></Route>
-        <Route path="/work-orders"><PlaceholderRoute title="Work Order Management" /></Route>
-        <Route path="/milestones"><PlaceholderRoute title="Milestone Module" /></Route>
-        
-        <Route path="/vendors"><PlaceholderRoute title="Vendor / Supplier Management" /></Route>
-        <Route path="/purchase-orders"><PlaceholderRoute title="Purchase Order Management" /></Route>
-        <Route path="/inventory"><PlaceholderRoute title="Inventory Management" /></Route>
-        
-        <Route path="/customers"><PlaceholderRoute title="Customer Management" /></Route>
-        <Route path="/invoices"><PlaceholderRoute title="Invoice & Billing" /></Route>
-        <Route path="/petty-cash"><PlaceholderRoute title="Petty Cash" /></Route>
-        
-        <Route path="/employees"><PlaceholderRoute title="Employee Management" /></Route>
-        <Route path="/attendance"><PlaceholderRoute title="Attendance Management" /></Route>
-        <Route path="/leave"><PlaceholderRoute title="Leave Management" /></Route>
-        
-        <Route path="/reminders"><PlaceholderRoute title="Reminder Module" /></Route>
-        <Route path="/reports"><PlaceholderRoute title="Reports" /></Route>
-        <Route path="/settings"><PlaceholderRoute title="Settings" /></Route>
 
-        {/* Structured Placeholders */}
-        <Route path="/payroll"><PlaceholderRoute title="Payroll Management" /></Route>
-        <Route path="/tender"><PlaceholderRoute title="Tender / Estimation Management" /></Route>
-        <Route path="/boq"><PlaceholderRoute title="BOQ Management" /></Route>
-        <Route path="/inventory-movement"><PlaceholderRoute title="Inventory Movement Tracking" /></Route>
-        <Route path="/asset"><PlaceholderRoute title="Asset Management" /></Route>
-        <Route path="/expense"><PlaceholderRoute title="Expense Management" /></Route>
-        <Route path="/revenue"><PlaceholderRoute title="Revenue Management" /></Route>
-        <Route path="/payment-tracking"><PlaceholderRoute title="Payment Tracking" /></Route>
-        <Route path="/contract"><PlaceholderRoute title="Contract Management" /></Route>
-        <Route path="/approval-workflow"><PlaceholderRoute title="Approval Workflow Management" /></Route>
-        <Route path="/document"><PlaceholderRoute title="Document Management" /></Route>
-        <Route path="/mail-config"><PlaceholderRoute title="Mail Configuration" /></Route>
-        <Route path="/category"><PlaceholderRoute title="Category Management" /></Route>
-        
+        {/* Fully implemented modules */}
+        <Route path="/projects" component={Projects} />
+        <Route path="/sites" component={Sites} />
+        <Route path="/work-orders" component={WorkOrders} />
+        <Route path="/milestones" component={Milestones} />
+        <Route path="/vendors" component={Vendors} />
+        <Route path="/purchase-orders" component={PurchaseOrders} />
+        <Route path="/inventory" component={Inventory} />
+        <Route path="/customers" component={Customers} />
+        <Route path="/invoices" component={Invoices} />
+        <Route path="/petty-cash" component={PettyCash} />
+        <Route path="/employees" component={Employees} />
+        <Route path="/attendance" component={Attendance} />
+        <Route path="/leave" component={Leave} />
+        <Route path="/reminders" component={Reminders} />
+        <Route path="/reports" component={Reports} />
+        <Route path="/settings" component={Settings} />
+        <Route path="/audit-logs" component={AuditLogs} />
+
+        {/* Scaffolded placeholders */}
+        <Route path="/payroll">
+          <PlaceholderRoute title="Payroll Management" plannedFeatures={[
+            "Monthly salary processing", "Payslip generation & email", "Statutory deductions (PF, ESI, TDS)",
+            "Bonus & incentive computation", "Bank transfer file export"
+          ]} />
+        </Route>
+        <Route path="/tender">
+          <PlaceholderRoute title="Tender / Estimation Management" plannedFeatures={[
+            "Tender registration & tracking", "Cost estimation builder", "Bid comparison",
+            "Submission deadlines & reminders", "Win/loss analytics"
+          ]} />
+        </Route>
+        <Route path="/boq">
+          <PlaceholderRoute title="BOQ Management" plannedFeatures={[
+            "Item-wise bill of quantities", "Rate analysis", "Revision history",
+            "Excel import/export", "BOQ vs actual variance reporting"
+          ]} />
+        </Route>
+        <Route path="/inventory-movement">
+          <PlaceholderRoute title="Inventory Movement Tracking" plannedFeatures={[
+            "GRN (Goods Receipt Notes)", "Stock issue & return notes", "Inter-site transfers",
+            "Stock adjustments", "Real-time movement ledger"
+          ]} />
+        </Route>
+        <Route path="/asset">
+          <PlaceholderRoute title="Asset Management" plannedFeatures={[
+            "Asset register", "Depreciation schedules", "Maintenance & service logs",
+            "Asset assignment to sites/employees", "QR-code asset tagging"
+          ]} />
+        </Route>
+        <Route path="/expense">
+          <PlaceholderRoute title="Expense Management" plannedFeatures={[
+            "Expense claim submission", "Multi-level approvals", "Receipt OCR & attachment",
+            "Project-wise expense tracking", "Reimbursement processing"
+          ]} />
+        </Route>
+        <Route path="/revenue">
+          <PlaceholderRoute title="Revenue Management" plannedFeatures={[
+            "Project revenue forecasting", "Milestone billing recognition", "Customer-wise revenue",
+            "Revenue vs target dashboards", "Recurring revenue contracts"
+          ]} />
+        </Route>
+        <Route path="/payment-tracking">
+          <PlaceholderRoute title="Payment Tracking" plannedFeatures={[
+            "Receivables aging", "Payable schedule", "Payment reminders & follow-ups",
+            "Bank reconciliation", "Cheque / NEFT / UPI tracking"
+          ]} />
+        </Route>
+        <Route path="/contract">
+          <PlaceholderRoute title="Contract Management" plannedFeatures={[
+            "Contract repository", "Renewal & expiry alerts", "SLA & milestone clauses",
+            "Digital signature workflow", "Amendment history"
+          ]} />
+        </Route>
+        <Route path="/approval-workflow">
+          <PlaceholderRoute title="Approval Workflow Management" plannedFeatures={[
+            "Configurable multi-step approvals", "Role-based routing", "Pending approvals inbox",
+            "Delegation during leave", "Approval audit trail"
+          ]} />
+        </Route>
+        <Route path="/document">
+          <PlaceholderRoute title="Document Management" plannedFeatures={[
+            "Centralized document vault", "Version control", "Folder permissions",
+            "Drawing & specification library", "Bulk upload & tagging"
+          ]} />
+        </Route>
+        <Route path="/mail-config">
+          <PlaceholderRoute title="Mail Configuration" plannedFeatures={[
+            "SMTP server setup", "Email templates editor", "Trigger rules",
+            "Send-test diagnostic", "Mail delivery logs"
+          ]} />
+        </Route>
+        <Route path="/category">
+          <PlaceholderRoute title="Category Management" plannedFeatures={[
+            "Master categories for items, expenses, vendors", "Hierarchical sub-categories",
+            "Bulk import", "Active/inactive status", "Usage analytics"
+          ]} />
+        </Route>
+
         <Route component={NotFound} />
       </Switch>
     </AppShell>
@@ -82,7 +160,7 @@ function AuthenticatedApp() {
 
 function Router() {
   const { user } = useAuthStore();
-  
+
   return (
     <Switch>
       <Route path="/login">
