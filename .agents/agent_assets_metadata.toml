@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CQN-fyy5iXz4uSwcr_gRw"
+uri = "file://artifacts/elite-mek-erp/src/assets/elite-mek-logo.png"
+type = "image"
+title = "Elite Mek Engineering Logo"

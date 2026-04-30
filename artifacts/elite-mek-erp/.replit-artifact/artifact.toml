@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Elite Mek Engineering ERP"
+version = "1.0.0"
+id = "artifacts/elite-mek-erp"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20571
+
+[services.development]
+run = "pnpm --filter @workspace/elite-mek-erp run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/elite-mek-erp", "run", "build" ]
+publicDir = "artifacts/elite-mek-erp/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20571"
+BASE_PATH = "/"
