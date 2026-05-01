@@ -25,6 +25,18 @@ import {
   Menu,
   ChevronLeft,
   ChevronRight,
+  DollarSign,
+  FileSpreadsheet,
+  Target,
+  ScrollText,
+  ArrowRightLeft,
+  Cpu,
+  Receipt,
+  TrendingUp,
+  CreditCard,
+  GitBranch,
+  FolderOpen,
+  Tag
 } from "lucide-react";
 import { 
   Sidebar as ShadcnSidebar, 
@@ -57,6 +69,9 @@ const NAVIGATION_GROUPS = [
       { name: "Sites", icon: MapPin, href: "/sites" },
       { name: "Work Orders", icon: ClipboardList, href: "/work-orders" },
       { name: "Milestones", icon: Flag, href: "/milestones" },
+      { name: "BOQ", icon: FileSpreadsheet, href: "/boq" },
+      { name: "Tender", icon: Target, href: "/tender" },
+      { name: "Contracts", icon: ScrollText, href: "/contract" }
     ]
   },
   {
@@ -65,6 +80,8 @@ const NAVIGATION_GROUPS = [
       { name: "Vendors", icon: Truck, href: "/vendors" },
       { name: "Purchase Orders", icon: ShoppingCart, href: "/purchase-orders" },
       { name: "Inventory", icon: PackageSearch, href: "/inventory" },
+      { name: "Inv. Movement", icon: ArrowRightLeft, href: "/inventory-movement" },
+      { name: "Assets", icon: Cpu, href: "/asset" }
     ]
   },
   {
@@ -73,6 +90,9 @@ const NAVIGATION_GROUPS = [
       { name: "Customers", icon: Building2, href: "/customers" },
       { name: "Invoices", icon: FileText, href: "/invoices" },
       { name: "Petty Cash", icon: Banknote, href: "/petty-cash" },
+      { name: "Expenses", icon: Receipt, href: "/expense" },
+      { name: "Revenue", icon: TrendingUp, href: "/revenue" },
+      { name: "Payments", icon: CreditCard, href: "/payment-tracking" }
     ]
   },
   {
@@ -81,6 +101,14 @@ const NAVIGATION_GROUPS = [
       { name: "Employees", icon: Users, href: "/employees" },
       { name: "Attendance", icon: CalendarCheck, href: "/attendance" },
       { name: "Leave", icon: CalendarOff, href: "/leave" },
+      { name: "Payroll", icon: DollarSign, href: "/payroll" }
+    ]
+  },
+  {
+    label: "Workflow",
+    items: [
+      { name: "Approval Workflow", icon: GitBranch, href: "/approval-workflow" },
+      { name: "Documents", icon: FolderOpen, href: "/document" }
     ]
   },
   {
@@ -88,7 +116,13 @@ const NAVIGATION_GROUPS = [
     items: [
       { name: "Reminders", icon: Bell, href: "/reminders" },
       { name: "Reports", icon: BarChart3, href: "/reports" },
-      { name: "Settings", icon: Settings, href: "/settings" },
+      { name: "Settings", icon: Settings, href: "/settings" }
+    ]
+  },
+  {
+    label: "Configuration",
+    items: [
+      { name: "Categories", icon: Tag, href: "/category" }
     ]
   }
 ];

@@ -1,0 +1,529 @@
+# Functional Requirements Document (FRD)
+
+# MEP ERP System
+
+## Technology Stack
+
+* Frontend: Vite + React + TypeScript
+* Backend: Node.js + Express API
+* Database: PostgreSQL
+* ORM: Prisma preferred
+* Authentication: JWT + Refresh Token
+* File/Image Handling: Inbuilt upload + preview + attachment management using suitable libraries
+* Export: PDF + Excel + CSV
+* Import: Excel + CSV
+* Notifications: Toast messages + Reminder engine
+* Validation: Frontend + Backend validation
+
+---
+
+# Core System Requirements
+
+## Authentication Module
+
+### Functional Requirements
+
+* User Register
+* User Login
+* Forgot Password
+* Reset Password
+* Change Password
+* Logout with confirmation prompt
+* Welcome dialog popup after successful login
+* Login history tracking
+* Device/session tracking
+* Password policy
+* OTP optional support
+* User activation/deactivation
+
+### Toast & Confirmation Requirements
+
+* Login success toast
+* Login failure toast
+* Logout confirmation popup
+* Delete confirmation popup
+* Save/update success toast
+* Validation error toast
+* Import/export success/failure toast
+
+---
+
+## Profile Management
+
+### Functional Requirements
+
+* Right-side profile section in header
+* My Profile view
+* My Profile update
+* Profile image upload
+* Profile image preview
+* Change password
+* Contact details update
+* Personal details update
+* Activity summary
+
+---
+
+## Settings Module
+
+### Functional Requirements
+
+* Company Settings
+* Brand Name configuration
+* Company Address
+* GST Number
+* Phone Number
+* Email configuration
+* Additional required fields configuration
+* Branch settings
+* Financial year settings
+* Currency settings
+* Tax settings
+* Mail configuration
+* SMTP settings
+* Notification settings
+* Approval settings
+* Backup settings
+* System preferences
+* Typography settings
+* Module visibility settings
+* Hide/Unhide unused modules
+* Required module enable/disable control
+
+---
+
+## File Management Module (Company-wise)
+
+### Functional Requirements
+
+* Company-wise file storage
+* Folder-wise document organization
+* Project-wise file storage
+* Employee-wise file storage
+* Contract/document repository
+* Image upload support
+* Document upload support
+* Spreadsheet preview
+* PDF preview
+* DOC preview
+* Attachment preview using package/library
+* Download attachments
+* Version control
+* Expiry reminders for documents
+* Access permission control
+
+---
+
+# Main Business Modules
+
+## 1. Employee Management
+
+### Functional Requirements
+
+* Create, edit, view, deactivate employee profiles
+* Store personal, official, and salary details
+* Department, designation, branch mapping
+* Employee ID auto generation
+* Role assignment and reporting manager mapping
+* Employee status tracking
+* Document upload and preview
+* Employee image upload
+* Employee image preview
+* Import/export Excel and PDF
+* Comments and activity tracking
+* Record-level audit logs
+
+### Fields
+
+* Employee ID
+* Employee Name
+* Department
+* Designation
+* Joining Date
+* Salary
+* Contact Number
+* Email
+* Address
+* Documents
+* Profile Image
+* Status
+
+---
+
+## 2. Attendance Management
+
+### Functional Requirements
+
+* Daily attendance entry
+* Site-wise attendance
+* Shift and overtime tracking
+* Late mark and half-day handling
+* Attendance regularization
+* Monthly attendance summary
+* Attendance reports and exports
+* Reminder for missing attendance
+* Record comments and audit logs
+
+### Fields
+
+* Attendance Date
+* Employee ID
+* Check In
+* Check Out
+* Shift
+* Overtime
+* Status
+* Remarks
+
+---
+
+## 3. Payroll Management
+
+### Functional Requirements
+
+* Salary structure setup
+* Monthly payroll processing
+* OT calculation
+* Deductions and advances
+* Bonus and incentives
+* Payslip generation
+* Payroll approval workflow
+* Payroll reports
+* Payroll reminders
+* Record-level audit logs
+
+### Fields
+
+* Payroll Month
+* Employee ID
+* Basic Salary
+* Allowances
+* Deductions
+* OT Amount
+* Net Salary
+* Payslip Status
+
+---
+
+## 4. Leave Management
+
+### Functional Requirements
+
+* Leave request creation
+* Leave type configuration
+* Leave balance tracking
+* Approval workflow
+* Leave calendar
+* Leave history and reporting
+* Leave approval reminders
+
+### Fields
+
+* Leave Request ID
+* Employee ID
+* Leave Type
+* From Date
+* To Date
+* Reason
+* Approval Status
+
+---
+
+## 5. Customer Management
+
+### Fields
+
+* Customer ID
+* Customer Name
+* Company Name
+* Contact Person
+* Phone
+* Email
+* Address
+* Payment Terms
+
+---
+
+## 6. Vendor / Supplier Management
+
+### Fields
+
+* Vendor ID
+* Vendor Name
+* Contact Person
+* Phone
+* Email
+* Address
+* GST Number
+* Payment Terms
+
+---
+
+## 7. Project Management
+
+### Fields
+
+* Project ID
+* Project Name
+* Customer
+* Start Date
+* End Date
+* Budget
+* Status
+* Site Location
+* Project Manager
+
+---
+
+## 8. Work Order Management
+
+### Fields
+
+* Work Order ID
+* Project ID
+* Work Description
+* Assigned To
+* Start Date
+* Due Date
+* Status
+
+---
+
+## 9. Tender / Estimation Management
+
+### Fields
+
+* Tender ID
+* Client Name
+* BOQ Reference
+* Estimated Cost
+* Margin
+* Submission Date
+* Status
+
+---
+
+## 10. Purchase Order (PO) Management
+
+### Fields
+
+* PO Number
+* Vendor
+* PO Date
+* Project
+* Items
+* Quantity
+* Amount
+* Approval Status
+* Delivery Status
+
+---
+
+## 11. Inventory Management
+
+### Fields
+
+* Item ID
+* Item Name
+* Category
+* Unit
+* Opening Stock
+* Current Stock
+* Min Stock Level
+* Warehouse
+
+---
+
+## 12. Inventory Movement Tracking
+
+### Fields
+
+* Movement ID
+* Item ID
+* From Location
+* To Location
+* Quantity
+* Movement Date
+* Issued By
+* Received By
+
+---
+
+## 13. Asset Management
+
+### Fields
+
+* Asset ID
+* Asset Name
+* Category
+* Assigned To
+* Purchase Date
+* Warranty
+* Maintenance Due
+* Status
+
+---
+
+## 14. Expense Management
+
+### Fields
+
+* Expense ID
+* Expense Type
+* Project
+* Amount
+* Expense Date
+* Paid By
+* Approval Status
+* Remarks
+
+---
+
+## 15. Revenue Management
+
+### Fields
+
+* Revenue ID
+* Customer
+* Project
+* Invoice Number
+* Invoice Amount
+* Received Amount
+* Balance
+* Payment Date
+
+---
+
+## 16. Invoice & Billing Management
+
+### Fields
+
+* Invoice Number
+* Customer
+* Project
+* Invoice Date
+* Due Date
+* Tax
+* Total Amount
+* Status
+
+---
+
+## 17. Payment Tracking
+
+### Fields
+
+* Payment ID
+* Reference Type
+* Reference Number
+* Party Name
+* Amount
+* Payment Date
+* Mode
+* Status
+
+---
+
+## 18. Approval Workflow Management
+
+## 19. Document Management
+
+## 20. Dashboard Management
+
+## 21. Reports & Analytics
+
+## 22. Notification System
+
+## 23. Mail Configuration
+
+## 24. Audit Logs
+
+## 25. Role & Permission Management
+
+## 26. Site Management
+
+## 27. BOQ Management
+
+## 28. Contract Management
+
+## 29. Petty Cash Management
+
+(All above modules include full CRUD + approval flow + audit logs + image upload where needed + attachment preview + comments + reminders where required.)
+
+---
+
+# Common Functional Requirements for All Modules
+
+* Create / Edit / Delete / View
+* Approval workflow
+* Search and advanced filters
+* Unified global search
+* Import / Export
+* Export PDF with Brand Name + Company Address + GST + Phone Number
+* Export Excel reports
+* Attachment upload and preview
+* Image upload and image preview
+* Spreadsheet preview
+* PDF preview
+* DOC preview
+* Pagination (default 30 records)
+* Validation messages
+* Toast notifications
+* Delete confirmation popup
+* Logout confirmation popup
+* Status management
+* Activity timeline
+* Notes and comments
+* Record-level audit tracking by user name + status
+* Created by / Updated by / timestamps
+* Role-based access control
+* Reminder feature for required modules
+* Welcome popup during login
+* Hide/Unhide optional modules from settings
+
+---
+
+# Reports Module Requirements
+
+* Unified report center across all modules
+* PDF export with company branding
+* Excel export
+* Drill-down reporting
+* Summary and detailed reports
+* Print-friendly reports
+* Filter by date/project/employee/customer/vendor
+* Audit reports
+* Financial reports
+* Inventory reports
+* Payroll reports
+* Attendance reports
+
+---
+
+# Reminder Module Requirements
+
+* Payment due reminders
+* Attendance reminders
+* Payroll reminders
+* Leave approval reminders
+* Contract expiry reminders
+* Asset maintenance reminders
+* Document expiry reminders
+* PO pending reminders
+* Invoice due reminders
+* Dashboard reminder cards
+* Email reminder support
+
+---
+
+# Audit Log Requirements
+
+* Record-level audit logs
+* Username tracking
+* Status tracking
+* Old value / New value comparison
+* Timestamp
+* IP tracking
+* Approval logs
+* Comments history
+* Exportable audit reports

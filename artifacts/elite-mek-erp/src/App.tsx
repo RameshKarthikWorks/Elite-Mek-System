@@ -23,6 +23,18 @@ import Reminders from "@/pages/reminders/Reminders";
 import Reports from "@/pages/reports/Reports";
 import Settings from "@/pages/settings/Settings";
 import AuditLogs from "@/pages/audit/AuditLogs";
+import Payroll from "@/pages/payroll/Payroll";
+import Tender from "@/pages/tender/Tender";
+import BOQ from "@/pages/boq/BOQ";
+import InventoryMovement from "@/pages/inventory-movement/InventoryMovement";
+import Asset from "@/pages/asset/Asset";
+import Expense from "@/pages/expense/Expense";
+import Revenue from "@/pages/revenue/Revenue";
+import PaymentTracking from "@/pages/payment-tracking/PaymentTracking";
+import Contract from "@/pages/contract/Contract";
+import ApprovalWorkflow from "@/pages/approval-workflow/ApprovalWorkflow";
+import DocumentManagement from "@/pages/document/DocumentManagement";
+import Category from "@/pages/category/Category";
 import { ModuleScaffold } from "@/components/ModuleScaffold";
 import { useAuthStore } from "@/lib/store/auth";
 import { useEffect } from "react";
@@ -71,84 +83,25 @@ function AuthenticatedApp() {
         <Route path="/reports" component={Reports} />
         <Route path="/settings" component={Settings} />
         <Route path="/audit-logs" component={AuditLogs} />
+        
+        <Route path="/payroll" component={Payroll} />
+        <Route path="/tender" component={Tender} />
+        <Route path="/boq" component={BOQ} />
+        <Route path="/inventory-movement" component={InventoryMovement} />
+        <Route path="/asset" component={Asset} />
+        <Route path="/expense" component={Expense} />
+        <Route path="/revenue" component={Revenue} />
+        <Route path="/payment-tracking" component={PaymentTracking} />
+        <Route path="/contract" component={Contract} />
+        <Route path="/approval-workflow" component={ApprovalWorkflow} />
+        <Route path="/document" component={DocumentManagement} />
+        <Route path="/category" component={Category} />
 
         {/* Scaffolded placeholders */}
-        <Route path="/payroll">
-          <PlaceholderRoute title="Payroll Management" plannedFeatures={[
-            "Monthly salary processing", "Payslip generation & email", "Statutory deductions (PF, ESI, TDS)",
-            "Bonus & incentive computation", "Bank transfer file export"
-          ]} />
-        </Route>
-        <Route path="/tender">
-          <PlaceholderRoute title="Tender / Estimation Management" plannedFeatures={[
-            "Tender registration & tracking", "Cost estimation builder", "Bid comparison",
-            "Submission deadlines & reminders", "Win/loss analytics"
-          ]} />
-        </Route>
-        <Route path="/boq">
-          <PlaceholderRoute title="BOQ Management" plannedFeatures={[
-            "Item-wise bill of quantities", "Rate analysis", "Revision history",
-            "Excel import/export", "BOQ vs actual variance reporting"
-          ]} />
-        </Route>
-        <Route path="/inventory-movement">
-          <PlaceholderRoute title="Inventory Movement Tracking" plannedFeatures={[
-            "GRN (Goods Receipt Notes)", "Stock issue & return notes", "Inter-site transfers",
-            "Stock adjustments", "Real-time movement ledger"
-          ]} />
-        </Route>
-        <Route path="/asset">
-          <PlaceholderRoute title="Asset Management" plannedFeatures={[
-            "Asset register", "Depreciation schedules", "Maintenance & service logs",
-            "Asset assignment to sites/employees", "QR-code asset tagging"
-          ]} />
-        </Route>
-        <Route path="/expense">
-          <PlaceholderRoute title="Expense Management" plannedFeatures={[
-            "Expense claim submission", "Multi-level approvals", "Receipt OCR & attachment",
-            "Project-wise expense tracking", "Reimbursement processing"
-          ]} />
-        </Route>
-        <Route path="/revenue">
-          <PlaceholderRoute title="Revenue Management" plannedFeatures={[
-            "Project revenue forecasting", "Milestone billing recognition", "Customer-wise revenue",
-            "Revenue vs target dashboards", "Recurring revenue contracts"
-          ]} />
-        </Route>
-        <Route path="/payment-tracking">
-          <PlaceholderRoute title="Payment Tracking" plannedFeatures={[
-            "Receivables aging", "Payable schedule", "Payment reminders & follow-ups",
-            "Bank reconciliation", "Cheque / NEFT / UPI tracking"
-          ]} />
-        </Route>
-        <Route path="/contract">
-          <PlaceholderRoute title="Contract Management" plannedFeatures={[
-            "Contract repository", "Renewal & expiry alerts", "SLA & milestone clauses",
-            "Digital signature workflow", "Amendment history"
-          ]} />
-        </Route>
-        <Route path="/approval-workflow">
-          <PlaceholderRoute title="Approval Workflow Management" plannedFeatures={[
-            "Configurable multi-step approvals", "Role-based routing", "Pending approvals inbox",
-            "Delegation during leave", "Approval audit trail"
-          ]} />
-        </Route>
-        <Route path="/document">
-          <PlaceholderRoute title="Document Management" plannedFeatures={[
-            "Centralized document vault", "Version control", "Folder permissions",
-            "Drawing & specification library", "Bulk upload & tagging"
-          ]} />
-        </Route>
         <Route path="/mail-config">
           <PlaceholderRoute title="Mail Configuration" plannedFeatures={[
             "SMTP server setup", "Email templates editor", "Trigger rules",
             "Send-test diagnostic", "Mail delivery logs"
-          ]} />
-        </Route>
-        <Route path="/category">
-          <PlaceholderRoute title="Category Management" plannedFeatures={[
-            "Master categories for items, expenses, vendors", "Hierarchical sub-categories",
-            "Bulk import", "Active/inactive status", "Usage analytics"
           ]} />
         </Route>
 
